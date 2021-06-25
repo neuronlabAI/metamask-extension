@@ -146,6 +146,9 @@ export default class ConfirmTransactionBase extends Component {
     supportsEIP1559: PropTypes.bool,
     hardwareWalletRequiresConnection: PropTypes.bool,
     isMultiLayerFeeNetwork: PropTypes.bool,
+    isFailedTransaction: PropTypes.bool,
+    removeTxFromFailedTxesToDisplay: PropTypes.func,
+    addTxToFailedTxesToDisplay: PropTypes.func,
   };
 
   state = {
@@ -778,6 +781,18 @@ export default class ConfirmTransactionBase extends Component {
     });
   }
 
+  handleFailedTxClose() {
+    const {
+      mostRecentOverviewPage,
+      txData,
+      removeTxFromFailedTxesToDisplay,
+      history,
+    } = this.props;
+
+    removeTxFromFailedTxesToDisplay(txData.id);
+    history.push(mostRecentOverviewPage);
+  }
+
   handleSubmit() {
     const {
       sendTransaction,
@@ -789,6 +804,7 @@ export default class ConfirmTransactionBase extends Component {
       maxFeePerGas,
       maxPriorityFeePerGas,
       baseFeePerGas,
+      addTxToFailedTxesToDisplay,
     } = this.props;
     const { submitting } = this.state;
 
@@ -822,6 +838,7 @@ export default class ConfirmTransactionBase extends Component {
       () => {
         this._removeBeforeUnload();
 
+        addTxToFailedTxesToDisplay(txData.id);
         sendTransaction(txData)
           .then(() => {
             clearConfirmTransaction();
@@ -996,6 +1013,7 @@ export default class ConfirmTransactionBase extends Component {
       nativeCurrency,
       hardwareWalletRequiresConnection,
       supportsEIP1559,
+      isFailedTransaction,
     } = this.props;
     const {
       submitting,
@@ -1048,7 +1066,7 @@ export default class ConfirmTransactionBase extends Component {
           toAddress={toAddress}
           toEns={toEns}
           toNickname={toNickname}
-          showEdit={Boolean(onEdit)}
+          showEdit={Boolean(onEdit) && !isFailedTransaction}
           action={functionType}
           title={title}
           titleComponent={this.renderTitleComponent()}
@@ -1086,7 +1104,12 @@ export default class ConfirmTransactionBase extends Component {
           onEdit={() => this.handleEdit()}
           onCancelAll={() => this.handleCancelAll()}
           onCancel={() => this.handleCancel()}
-          onSubmit={() => this.handleSubmit()}
+          onSubmit={() =>
+            isFailedTransaction
+              ? this.handleFailedTxClose()
+              : this.handleSubmit()
+          }
+          onConfirmAnyways={() => this.handleConfirmAnyways()}
           setUserAcknowledgedGasMissing={this.setUserAcknowledgedGasMissing}
           hideSenderToRecipient={hideSenderToRecipient}
           origin={txData.origin}
@@ -1099,6 +1122,7 @@ export default class ConfirmTransactionBase extends Component {
             supportsEIP1559 &&
             !isLegacyTransaction(txData)
           }
+          isFailedTransaction={isFailedTransaction}
         />
       </TransactionModalContextProvider>
     );
