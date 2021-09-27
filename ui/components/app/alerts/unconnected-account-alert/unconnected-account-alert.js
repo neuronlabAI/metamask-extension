@@ -13,7 +13,7 @@ import {
   getOriginOfCurrentTab,
   getOrderedConnectedAccountsForActiveTab,
   getSelectedAddress,
-  getSelectedIdentity,
+  getAccountToConnectToActiveTab,
 } from '../../../../selectors';
 import { isExtensionUrl, getURLHost } from '../../../../helpers/utils/util';
 import Popover from '../../../ui/popover';
@@ -32,8 +32,8 @@ const UnconnectedAccountAlert = () => {
   const connectedAccounts = useSelector(
     getOrderedConnectedAccountsForActiveTab,
   );
+  const accountToConnect = useSelector(getAccountToConnectToActiveTab);
   const origin = useSelector(getOriginOfCurrentTab);
-  const selectedIdentity = useSelector(getSelectedIdentity);
   const selectedAddress = useSelector(getSelectedAddress);
   const [dontShowThisAgain, setDontShowThisAgain] = useState(false);
 
@@ -97,7 +97,7 @@ const UnconnectedAccountAlert = () => {
       footer={footer}
     >
       <ConnectedAccountsList
-        accountToConnect={selectedIdentity}
+        accountToConnect={accountToConnect}
         connectAccount={() => dispatch(connectAccount(selectedAddress))}
         connectedAccounts={connectedAccounts}
         selectedAddress={selectedAddress}
