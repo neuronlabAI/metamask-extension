@@ -8,6 +8,7 @@ import Popover from '../../ui/popover';
 import { AdvanceGasFeePopoverContextProvider } from './context';
 import AdvancedGasFeeInputs from './advanced-gas-fee-inputs';
 import AdvancedGasFeeSaveButton from './advanced-gas-fee-save';
+import AdvancedGasFeeDefaults from './advanced-gas-fee-defaults';
 
 const AdvancedGasFeePopover = () => {
   const t = useI18nContext();
@@ -30,6 +31,7 @@ const AdvancedGasFeePopover = () => {
       >
         <Box className="advanced-gas-fee-popover__wrapper">
           <AdvancedGasFeeInputs />
+          <AdvancedGasFeeDefaults />
         </Box>
       </Popover>
     </AdvanceGasFeePopoverContextProvider>
