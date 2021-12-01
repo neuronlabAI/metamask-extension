@@ -2053,6 +2053,9 @@
   "priorityFee": {
     "message": "Priority Fee"
   },
+  "priorityFeeProperCase": {
+    "message": "Priority fee"
+  },
   "privacyMsg": {
     "message": "Privacy Policy"
   },

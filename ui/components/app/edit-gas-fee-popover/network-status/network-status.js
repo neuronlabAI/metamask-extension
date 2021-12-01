@@ -40,7 +40,7 @@ const NetworkStatus = () => {
             <PriorityFeeTooltip>0.5 - 22 GWEI</PriorityFeeTooltip>
           </span>
           <span className="network-status__info__field-label">
-            <I18nValue messageKey="priorityFee" />
+            <I18nValue messageKey="priorityFeeProperCase" />
           </span>
         </div>
         <div className="network-status__info__separator" />
