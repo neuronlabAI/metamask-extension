@@ -18,7 +18,7 @@ const GRADIENT_COLORS = [
 
 const StatusInfo = {
   low: {
-    statusLabel: 'stable',
+    statusLabel: 'notBusy',
     tooltipLabel: 'stable',
     color: GRADIENT_COLORS[0],
   },
@@ -28,7 +28,7 @@ const StatusInfo = {
     color: GRADIENT_COLORS[4],
   },
   high: {
-    statusLabel: 'stable',
+    statusLabel: 'busy',
     tooltipLabel: 'stable',
     color: GRADIENT_COLORS[9],
   },
