@@ -42,7 +42,11 @@ const multiplyCurrencyValues = (baseFee, value, numberOfDecimals) =>
 const BaseFeeInput = () => {
   const t = useI18nContext();
   const { gasFeeEstimates, estimateUsed, maxFeePerGas } = useGasFeeContext();
-  const { setDirty, setMaxFeePerGas } = useAdvanceGasFeePopoverContext();
+  const {
+    setDirty,
+    setMaxFeePerGas,
+    setMaxBaseFee,
+  } = useAdvanceGasFeePopoverContext();
   const { estimatedBaseFee } = gasFeeEstimates;
   const {
     numberOfDecimals: numberOfDecimalsPrimary,
@@ -116,7 +120,8 @@ const BaseFeeInput = () => {
 
   useEffect(() => {
     setMaxFeePerGas(maxBaseFeeGWEI);
-  }, [maxBaseFeeGWEI, setMaxFeePerGas]);
+    setMaxBaseFee(maxBaseFeeMultiplier);
+  }, [maxBaseFeeGWEI, maxBaseFeeMultiplier, setMaxFeePerGas, setMaxBaseFee]);
 
   return (
     <Box className="base-fee-input">
