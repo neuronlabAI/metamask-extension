@@ -7,9 +7,7 @@ export const NOTIFICATION_NAMES = {
 };
 
 export const LOG_IGNORE_METHODS = [
-  'wallet_addEthereumChain',
   'wallet_registerOnboarding',
-  'wallet_switchEthereumChain',
   'wallet_watchAsset',
 ];
 
