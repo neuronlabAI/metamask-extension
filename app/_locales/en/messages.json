@@ -1232,6 +1232,9 @@
   "high": {
     "message": "Aggressive"
   },
+  "highLowercase": {
+    "message": "high"
+  },
   "history": {
     "message": "History"
   },
@@ -1487,6 +1490,9 @@
   "low": {
     "message": "Low"
   },
+  "lowLowercase": {
+    "message": "Low"
+  },
   "lowPriorityMessage": {
     "message": "Future transactions will queue after this one. This price was last seen was some time ago."
   },
@@ -1681,7 +1687,7 @@
     "description": "$1 and $2 are bold text for Medium and Aggressive respectively."
   },
   "networkStatusPriorityFeeTooltip": {
-    "message": "Range of prority fees (aka “miner tip”). This goes to miners and incentivizes them to prioritize your transaction."
+    "message": "Range of priority fees (aka “miner tip”). This goes to miners and incentivizes them to prioritize your transaction."
   },
   "networkStatusStabilityFeeTooltip": {
     "message": "Gas fees are $1 relative to the past 24 hours.",
@@ -2516,6 +2522,9 @@
   },
   "stable": {
     "message": "Stable"
+  },
+  "stableLowercase": {
+    "message": "stable"
   },
   "stateLogError": {
     "message": "Error in retrieving state logs."

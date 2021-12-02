@@ -8,11 +8,11 @@ import Typography from '../../../ui/typography/typography';
 import { BaseFeeTooltip, PriorityFeeTooltip } from './tooltips';
 import StatusSlider from './status-slider';
 
-const NetworkStatus = () => {
+const  = () => {
   const { gasFeeEstimates } = useGasFeeContext();
 
   return (
-    <div className="network-status">
+    <div className="network-statistics">
       <Typography
         color={COLORS.UI4}
         fontSize="10px"
@@ -52,6 +52,6 @@ const NetworkStatus = () => {
   );
 };
 
-NetworkStatus.propTypes = {};
+.propTypes = {};
 
-export default NetworkStatus;
+export default ;
