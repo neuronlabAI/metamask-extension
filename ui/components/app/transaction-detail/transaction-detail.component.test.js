@@ -41,6 +41,7 @@ const render = ({ componentProps, contextProps } = {}) => {
           console.log('on edit');
         }}
         rows={[]}
+        userAcknowledgedGasMissing
         {...componentProps}
       />
     </GasFeeContextProvider>,

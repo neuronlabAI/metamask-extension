@@ -354,10 +354,6 @@
     "message": "Swap",
     "description": "This is used with viewOnEtherscan e.g View Swap on Etherscan"
   },
-  "blockExplorerTransactionAction": {
-    "message": "Transaction",
-    "description": "This is used with viewOnCustomBlockExplorer and viewOnEtherscan e.g View Transaction on Etherscan"
-  },
   "blockExplorerUrl": {
     "message": "Block Explorer URL"
   },
@@ -581,14 +577,14 @@
   "copiedExclamation": {
     "message": "Copied!"
   },
-  "copiedTransactionId": {
-    "message": "Copied Transaction ID"
-  },
   "copyAddress": {
     "message": "Copy address to clipboard"
   },
   "copyPrivateKey": {
     "message": "This is your private key (click to copy)"
+  },
+  "copyRawTransactionData": {
+    "message": "Copy raw transaction data"
   },
   "copyToClipboard": {
     "message": "Copy to clipboard"
@@ -665,6 +661,9 @@
   },
   "dataBackupFoundInfo": {
     "message": "Some of your account data was backed up during a previous installation of MetaMask. This could include your settings, contacts, and tokens. Would you like to restore this data now?"
+  },
+  "dataHex": {
+    "message": "Hex"
   },
   "decimal": {
     "message": "Token Decimal"
@@ -763,6 +762,9 @@
   },
   "edit": {
     "message": "Edit"
+  },
+  "editANickname": {
+    "message": "Edit nickname"
   },
   "editAddressNickname": {
     "message": "Edit address nickname"
@@ -872,6 +874,12 @@
   },
   "enableFromSettings": {
     "message": " Enable it from Settings."
+  },
+  "enableOpenSeaAPI": {
+    "message": "Enable OpenSea API"
+  },
+  "enableOpenSeaAPIDescription": {
+    "message": "Use OpenSea's API to fetch NFT data. NFT auto-detection relies on OpenSea's API, and will not be available when this is turned off."
   },
   "encryptionPublicKeyNotice": {
     "message": "$1 would like your public encryption key. By consenting, this site will be able to compose encrypted messages to you.",
@@ -1043,6 +1051,33 @@
   "fileImportFail": {
     "message": "File import not working? Click here!",
     "description": "Helps user import their account from a JSON file"
+  },
+  "flaskExperimentalText1": {
+    "message": "Using Flask can greatly increase your risk of fund loss:"
+  },
+  "flaskExperimentalText2": {
+    "message": "if you use it to install non-trustworthy Snaps"
+  },
+  "flaskExperimentalText3": {
+    "message": "if you do not review confirmations before approving changes"
+  },
+  "flaskExperimentalText4": {
+    "message": "if you interact with unfamiliar smart contracts"
+  },
+  "flaskExperimentalText5": {
+    "message": "Using Flask gives you much greater discretion in using the power of MetaMask, and that discretion is yours. Do you accept these risks as well as extra responsibility for your wallet's safety?"
+  },
+  "flaskSnapSettingsCardButtonCta": {
+    "message": "See details",
+    "description": "Call to action a user can take to see more information about the Snap that is installed"
+  },
+  "flaskSnapSettingsCardDateAddedOn": {
+    "message": "Added on",
+    "description": "Start of the sentence describing when and where snap was added"
+  },
+  "flaskSnapSettingsCardFrom": {
+    "message": "from",
+    "description": "Part of the sentence describing when and where snap was added"
   },
   "followUsOnTwitter": {
     "message": "Follow us on Twitter"
@@ -3004,6 +3039,12 @@
   "transactionCreated": {
     "message": "Transaction created with a value of $1 at $2."
   },
+  "transactionData": {
+    "message": "Transaction data"
+  },
+  "transactionDecodingUnsupportedNetworkError": {
+    "message": "Transaction decoding is not available for chainId $1"
+  },
   "transactionDetailDappGasMoreInfo": {
     "message": "Site suggested"
   },
@@ -3192,6 +3233,9 @@
   },
   "usedByClients": {
     "message": "Used by a variety of different clients"
+  },
+  "userAccepts": {
+    "message": "I accept"
   },
   "userName": {
     "message": "Username"
