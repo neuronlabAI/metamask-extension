@@ -46,10 +46,10 @@ const ACCOUNTS = {
  */
 const CAVEATS = {
   /**
-   * Gets a correctly formatted eth_accounts exposedAccounts caveat.
+   * Gets a correctly formatted eth_accounts restrictReturnedAccounts caveat.
    *
    * @param {Array<string>} accounts - The accounts for the caveat
-   * @returns {Object} An eth_accounts exposedAccounts caveats
+   * @returns {Object} An eth_accounts restrictReturnedAccounts caveats
    */
   eth_accounts: (accounts) => {
     return [
@@ -231,8 +231,8 @@ export const getters = deepFreeze({
      * Gets a metamask_sendDomainMetadata RPC request object.
      *
      * @param {string} origin - The origin of the request
-     * @param {Object} name - The domainMetadata name
-     * @param {Array<any>} [args] - Any other data for the request's domainMetadata
+     * @param {Object} name - The subjectMetadata name
+     * @param {Array<any>} [args] - Any other data for the request's subjectMetadata
      * @returns {Object} An RPC request object
      */
     metamask_sendDomainMetadata: (origin, name, ...args) => {
