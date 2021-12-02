@@ -17,6 +17,7 @@
 @import 'edit-gas-fee-popover/edit-gas-item/index';
 @import 'edit-gas-fee-popover/network-statistics/index';
 @import 'edit-gas-fee-popover/network-statistics/status-slider/index';
+@import 'flask/snaps-authorship-pill/index';
 @import 'gas-customization/gas-modal-page-container/index';
 @import 'gas-customization/gas-price-button-group/index';
 @import 'gas-customization/index';
@@ -36,6 +37,7 @@
 @import 'selected-account/index';
 @import 'signature-request/index';
 @import 'signature-request-original/index';
+@import 'flask/snap-settings-card/index';
 @import 'tab-bar/index';
 @import 'token-cell/token-cell';
 @import 'transaction-activity-log/index';
@@ -51,7 +53,9 @@
 @import 'wallet-overview/index';
 @import 'whats-new-popup/index';
 @import 'loading-network-screen/index';
+@import 'flask/experimental-area/index';
 @import 'advanced-gas-fee-popover/index';
 @import 'advanced-gas-fee-popover/advanced-gas-fee-inputs/index';
 @import 'advanced-gas-fee-popover/advanced-gas-fee-inputs/base-fee-input/index';
 @import 'advanced-gas-fee-popover/advanced-gas-fee-input-subtext/index';
+@import 'transaction-decoding/index';
